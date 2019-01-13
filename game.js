@@ -1,20 +1,39 @@
-var value = prompt ('Введите с какого числа выбирать');
-var value2 = prompt ('Введите до которого числа выбирать');
+var val = prompt ('Enter range, number from:');
+var val2 = prompt ('Number to:');
 
-min = parseInt(value)
-max = parseInt(value2)
+min = parseInt(val)
+max = parseInt(val2)
 
-var noVictory = true;
-while (noVictory){
-var value3 = prompt ('Как думаешь какое число я выбрал?');
 var rand = min + Math.random() * (max + 1 - min);
 rand = Math.floor(rand);
 
-if (rand == value3) {
-    alert('Да я таки выбрал '+ rand);
-    noVictory = false}
+// while (true){
+// var val3 = prompt ('What number did I choose?');
+// if (val3.replace (/\d/g, '').length || val.replace (/\d/g, '').length || val2.replace (/\d/g, '').length){
+// alert ('Pls input numbers only');
+//     break}
 
-else if (value3=== null){
-    noVictory = false}
+// if (rand == val3) {
+//     alert('You win!!! I chose the number '+ rand);
+//     break}
 
-else alert(' Неа, я выбрал '+rand)}
+// else if (val3=== null){
+//     break}
+
+// else alert('You lose')}
+
+for (;;){
+    var val3 = prompt ('What number did I choose?');
+if (val3.replace (/\d/g, '').length || val.replace (/\d/g, '').length || val2.replace (/\d/g, '').length){
+alert ('Pls input numbers only');
+    break}
+
+if (rand == val3) {
+    alert('You win!!! I chose the number '+ rand);
+    break}
+
+else if (val3=== null){
+    break}
+
+else alert('You lose')
+}
