@@ -7,11 +7,11 @@ quantity = parseInt(quantity);
 // for (i = num, b = 0; b < quantity ;i = i+num, b++){
 //      console.log(i);
 //     }
-i = num;
+
 b = 0;
 while (b < quantity){
-     console.log(i);
-     i = i+num
+     console.log(num);
+     num = num + num;
      b++
      
 }
