@@ -13,4 +13,5 @@ while (b < quantity){
      console.log(i);
      i = i+num
      b++
+     
 }
